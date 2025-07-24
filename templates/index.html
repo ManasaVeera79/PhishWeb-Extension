@@ -83,7 +83,7 @@
             <div class="result {% if prediction == 'safe' %}safe{% else %}unsafe{% endif %}">
                 {{ 'URL is safe:' if prediction == 'safe' else 'URL is unsafe:' }}
                 <a href="{{ request.form['url'] }}" target="_blank">{{ request.form['url'] }}</a>
-                <span class="icon">{% if prediction == 'safe' %}✔️{% else %}❌{% endif %}</span>
+                <span class="icon">{% if prediction == 'safe' %}{% else %}{% endif %}</span>
             </div>
         {% endif %}
     </div>
