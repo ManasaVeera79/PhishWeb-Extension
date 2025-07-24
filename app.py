@@ -1,13 +1,12 @@
 from flask import Flask, request, render_template
-from flask_cors import CORS  # ⬅️ Import CORS
+from flask_cors import CORS
 import joblib
 import numpy as np
 import re
 from urllib.parse import urlparse
 
 app = Flask(__name__)
-CORS(app)  # ⬅️ Enable CORS for all routes
-
+CORS(app)
 # Load the XGBoost model
 def load_model(model_path='xgb_model.pkl'):
     try:
@@ -63,7 +62,7 @@ def home():
         prediction = predict_url_safety(url)
     return render_template('index.html', prediction=prediction)
 
-@app.route('/api/predict', methods=['POST'])  # 🔐 Recommended for your Chrome Extension
+@app.route('/api/predict', methods=['POST'])
 def api_predict():
     data = request.get_json()
     url = data.get("url")
