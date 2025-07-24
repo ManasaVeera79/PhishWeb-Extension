@@ -6,7 +6,8 @@ Phishing attacks are a growing cybersecurity threat, and this Phishing Website D
 ##  Live Demo
 https://phishing-website-detection-app.streamlit.app/
 
-##  🧩 Chrome Extension (New Feature 🚀)
+#  🧩 Chrome Extension 
+## **This project features a **Chrome Extension** that allows users to instantly check whether a website is safe or not — directly from their browser.**
 We added a Chrome Extension so users can check a URL's safety without leaving their browser!
 ##  Features
 - **URL-based feature extraction** (e.g., presence of IP, URL length, redirections, etc.).
